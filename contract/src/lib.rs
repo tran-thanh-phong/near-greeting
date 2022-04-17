@@ -54,6 +54,10 @@ impl Welcome {
             None => "Hello".to_string(),
         }
     }
+
+    pub fn say_hello(&self, name: String) -> String {
+        format!("Hello {}", name)
+    }
 }
 
 /*

@@ -69,11 +69,12 @@ export default function App() {
             //   message: newGreeting
             // })
 
-            let greeting = await window.contract.say_hello({
+            let message = await window.contract.say_hello({
               name: newGreeting
             })
 
-            setHelloMessage(greeting)
+            setHelloMessage(message)
+            greeting.value = ''
           } catch (e) {
             alert(
               'Something went wrong! ' +
@@ -85,9 +86,6 @@ export default function App() {
             // re-enable the form, whether the call succeeded or failed
             fieldset.disabled = false
           }
-
-          // update local `greeting` variable to match persisted value
-          //set_greeting(newGreeting)
 
           // show Notification
           setShowNotification(true)

@@ -13,6 +13,8 @@ function getConfig(env) {
       helperUrl: 'https://helper.mainnet.near.org',
       explorerUrl: 'https://explorer.mainnet.near.org',
     }
+  case 'Preview':
+  case 'preview':
   case 'development':
   case 'testnet':
     return {
